@@ -93,8 +93,10 @@ const controlIsIntroduceCard = () => {
   }
 };
 
+// 立即调用判断卡片函数
 controlIsIntroduceCard();
 
+// 监听卡片名称变更
 watch(
   () => props.cardName,
   () => {
