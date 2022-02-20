@@ -1,5 +1,5 @@
 <template>
-  <div class="introduction-card">
+  <div class="introduction-card" v-if="show.isIntroduction">
     <div class="introduction-card-1" v-if="!show.isDeepLearing">
       <div class="introduction-card-1-back"></div>
       <div class="introduction-card-1-front">
@@ -24,7 +24,7 @@ import BackEnd from "./CardBackground/BackEnd";
 import Android from "./CardBackground/Android";
 import UI from "./CardBackground/UI";
 import DeepLearning from "./CardBackground/DeepLearning";
-import { reactive } from "vue";
+import { reactive, watch } from "vue";
 
 interface ShowList {
   name: String;
@@ -33,12 +33,14 @@ interface ShowList {
 
 interface Show {
   isDeepLearing: Boolean;
+  isIntroduction: Boolean;
   showList: Array<ShowList>;
 }
 
 const props = defineProps({ cardName: { type: String } });
 const show: Show = reactive({
   isDeepLearing: false,
+  isIntroduction: true,
   showList: [
     {
       name: "frontEnd",
@@ -63,18 +65,42 @@ const show: Show = reactive({
   ],
 });
 
-show.showList.map((item: ShowList): void => {
-  if (props.cardName === item.name) {
-    item.isShow = true;
-    if (props.cardName === "DeepLearning") {
-      show.isDeepLearing = true;
+// 控制小组介绍卡片显示与隐藏
+function controlShow() {
+  show.showList.map((item: ShowList): void => {
+    if (props.cardName === item.name) {
+      item.isShow = true;
+      if (props.cardName === "deepLearning") {
+        show.isDeepLearing = true;
+      } else {
+        show.isDeepLearing = false;
+      }
     } else {
-      show.isDeepLearing = false;
+      item.isShow = false;
     }
+  });
+}
+
+// 判断是否为小组介绍卡片
+const controlIsIntroduceCard = () => {
+  if (
+    show.showList.find((item) => item.name === props.cardName) !== undefined
+  ) {
+    show.isIntroduction = true;
+    controlShow();
   } else {
-    item.isShow = false;
+    show.isIntroduction = false;
   }
-});
+};
+
+controlIsIntroduceCard();
+
+watch(
+  () => props.cardName,
+  () => {
+    controlIsIntroduceCard();
+  }
+);
 </script>
 
 <style lang="scss">

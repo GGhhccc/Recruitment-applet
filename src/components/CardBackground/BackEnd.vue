@@ -3,27 +3,22 @@
     <image
       class="back-end-background-white-star1"
       src="../../static/images/introduce_card/white-star.png"
-      mode=""
     />
     <image
       class="back-end-background-robot"
       src="../../static/images/introduce_card/back-end-robot.png"
-      mode=""
     />
     <image
       class="back-end-background-white-star2"
       src="../../static/images/introduce_card/white-star.png"
-      mode=""
     />
     <image
       class="back-end-background-icon"
       src="../../static/images/introduce_card/back-end-icon.png"
-      mode=""
     />
     <image
       class="back-end-background-angle"
       src="../../static/images/introduce_card/back-end-angle.png"
-      mode=""
     />
     <BackEndText />
   </div>
