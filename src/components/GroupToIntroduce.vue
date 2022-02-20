@@ -25,16 +25,27 @@ import Android from "./CardBackground/Android";
 import UI from "./CardBackground/UI";
 import DeepLearning from "./CardBackground/DeepLearning";
 import { reactive } from "vue";
+
+interface ShowList {
+  name: String;
+  isShow: Boolean;
+}
+
+interface Show {
+  isDeepLearing: Boolean;
+  showList: Array<ShowList>;
+}
+
 const props = defineProps({ cardName: { type: String } });
-const show = reactive({
+const show: Show = reactive({
   isDeepLearing: false,
   showList: [
     {
-      name: "FrontEnd",
+      name: "frontEnd",
       isShow: true,
     },
     {
-      name: "BackEnd",
+      name: "backEnd",
       isShow: false,
     },
     {
@@ -46,13 +57,13 @@ const show = reactive({
       isShow: false,
     },
     {
-      name: "DeepLearning",
+      name: "deepLearning",
       isShow: false,
     },
   ],
 });
 
-show.showList.map((item) => {
+show.showList.map((item: ShowList): void => {
   if (props.cardName === item.name) {
     item.isShow = true;
     if (props.cardName === "DeepLearning") {
@@ -64,8 +75,6 @@ show.showList.map((item) => {
     item.isShow = false;
   }
 });
-
-console.log(props);
 </script>
 
 <style lang="scss">

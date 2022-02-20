@@ -2,22 +2,22 @@
   <div class="deep-learning-background">
     <image
       class="deep-learning-background-robot"
-      src="../../static/introduce_card/deep-learning-robot.png"
+      src="../../static/images/introduce_card/deep-learning-robot.png"
       mode=""
     />
     <image
       class="deep-learning-background-white-star1"
-      src="../../static/introduce_card/white-star.png"
+      src="../../static/images/introduce_card/white-star.png"
       alt=""
     />
     <image
       class="deep-learning-background-white-star2"
-      src="../../static/introduce_card/white-star.png"
+      src="../../static/images/introduce_card/white-star.png"
       alt=""
     />
     <image
       class="deep-learning-background-angle"
-      src="../../static/introduce_card/deep-learn-angle.png"
+      src="../../static/images/introduce_card/deep-learn-angle.png"
       mode=""
     />
     <DeepLearningText />

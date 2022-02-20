@@ -2,22 +2,22 @@
   <div class="front-end-background">
     <image
       class="front-end-background-white-star1"
-      src="../../static/introduce_card/white-star.png"
+      src="../../static/images/introduce_card/white-star.png"
       alt=""
     />
     <image
       class="front-end-background-robot"
       alt=""
-      src="../../static/introduce_card/front-end-robot.png"
+      src="../../static/images/introduce_card/front-end-robot.png"
     />
     <image
       class="front-end-background-icon"
       alt=""
-      src="../../static/introduce_card/front-end-icon.png"
+      src="../../static/images/introduce_card/front-end-icon.png"
     />
     <image
       class="front-end-background-white-star2"
-      src="../../static/introduce_card/white-star.png"
+      src="../../static/images/introduce_card/white-star.png"
       alt=""
     />
     <FrontEndText />

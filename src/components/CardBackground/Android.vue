@@ -2,22 +2,22 @@
   <div class="android-background">
     <image
       class="android-background-white-star1"
-      src="../../static/introduce_card/white-star.png"
+      src="../../static/images/introduce_card/white-star.png"
       mode=""
     />
     <image
       class="android-background-white-star2"
-      src="../../static/introduce_card/white-star.png"
+      src="../../static/images/introduce_card/white-star.png"
       mode=""
     />
     <image
       class="android-background-white-star3"
-      src="../../static/introduce_card/white-star.png"
+      src="../../static/images/introduce_card/white-star.png"
       mode=""
     />
     <image
       class="android-background-robot"
-      src="../../static/introduce_card/android-robot.png"
+      src="../../static/images/introduce_card/android-robot.png"
       mode=""
     />
     <AndroidText />

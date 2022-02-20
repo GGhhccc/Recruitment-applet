@@ -2,29 +2,29 @@
   <div class="ui-background">
     <image
       class="ui-background-robot"
-      src="../../static/introduce_card/ui-robot.png"
+      src="../../static/images/introduce_card/ui-robot.png"
       mode=""
     />
     <image
       class="ui-background-white-star1"
-      src="../../static/introduce_card/white-star.png"
+      src="../../static/images/introduce_card/white-star.png"
       mode=""
     />
     <image
       class="ui-background-white-star2"
-      src="../../static/introduce_card/white-star.png"
+      src="../../static/images/introduce_card/white-star.png"
       mode=""
     />
     <image
       class="ui-background-white-star3"
-      src="../../static/introduce_card/white-star.png"
+      src="../../static/images/introduce_card/white-star.png"
       mode=""
     />
     <UIText />
   </div>
   <image
     class="ui-background-angle"
-    src="../../static/introduce_card/ui-angle.png"
+    src="../../static/images/introduce_card/ui-angle.png"
     mode=""
   />
 </template>
