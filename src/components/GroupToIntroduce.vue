@@ -110,8 +110,6 @@ watch(
   &-1,
   &-2 {
     position: relative;
-    top: 50px;
-    left: 50px;
     &-back {
       width: 243.43px;
       height: 372.67px;
