@@ -1,23 +1,23 @@
 <template>
   <div class="back-end-background">
     <image
-      class="back-end-background-white-star1"
+      class="back-end-background__white-star1"
       src="../../static/images/introduce_card/white-star.png"
     />
     <image
-      class="back-end-background-robot"
+      class="back-end-background__robot"
       src="../../static/images/introduce_card/back-end-robot.png"
     />
     <image
-      class="back-end-background-white-star2"
+      class="back-end-background__white-star2"
       src="../../static/images/introduce_card/white-star.png"
     />
     <image
-      class="back-end-background-icon"
+      class="back-end-background__icon"
       src="../../static/images/introduce_card/back-end-icon.png"
     />
     <image
-      class="back-end-background-angle"
+      class="back-end-background__angle"
       src="../../static/images/introduce_card/back-end-angle.png"
     />
     <BackEndText />
@@ -49,45 +49,45 @@ import BackEndText from "./TextShow/BackEndText";
       rgba(255, 228, 225, 0.5) 0.01%,
       rgba(211, 196, 255, 0.5) 100%
     );
-  border-radius: 36px;
-  &-white-star1 {
+  border-radius: 72rpx;
+  &__white-star1 {
     position: absolute;
-    width: 51.6px;
-    height: 31.26px;
-    left: -21.65px;
-    top: 142.01px;
+    width: 103.2rpx;
+    height: 62.52rpx;
+    left: -43.3rpx;
+    top: 284.02rpx;
     transform: matrix(-0.02, -1, 1, -0.03, 0, 0);
     background: url(.png);
   }
-  &-white-star2 {
+  &__white-star2 {
     position: absolute;
-    width: 48.4px;
-    height: 71.61px;
-    left: 2px;
-    top: 324px;
+    width: 96.8rpx;
+    height: 143.22rpx;
+    left: 4rpx;
+    top: 648rpx;
   }
-  &-robot {
+  &__robot {
     position: absolute;
-    width: 161.95px;
-    height: 175.15px;
-    left: -59.48px;
-    top: 168.43px;
+    width: 323.9rpx;
+    height: 350.3rpx;
+    left: -118.96rpx;
+    top: 336.86rpx;
     background: url(.png);
   }
-  &-icon {
+  &__icon {
     position: absolute;
-    width: 183.91px;
-    height: 143.34px;
-    left: 125px;
-    top: -81px;
+    width: 367.82rpx;
+    height: 286.68rpx;
+    left: 250rpx;
+    top: -162rpx;
     background: url(.png);
   }
-  &-angle {
+  &__angle {
     position: absolute;
-    width: 92.97px;
-    height: 37.17px;
-    left: -45.62px;
-    top: 7.77px;
+    width: 185.94rpx;
+    height: 74.34rpx;
+    left: -91.24rpx;
+    top: 15.54rpx;
   }
 }
 </style>

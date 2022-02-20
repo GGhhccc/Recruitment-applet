@@ -1,17 +1,17 @@
 <template>
   <div class="introduction-card" v-if="show.isIntroduction">
-    <div class="introduction-card-1" v-if="!show.isDeepLearing">
-      <div class="introduction-card-1-back"></div>
-      <div class="introduction-card-1-front">
+    <div class="introduction-card_1" v-if="!show.isDeepLearing">
+      <div class="introduction-card_1--back"></div>
+      <div class="introduction-card_1--front">
         <FrontEnd v-if="show.showList[0].isShow" />
         <BackEnd v-if="show.showList[1].isShow" />
         <Android v-if="show.showList[3].isShow" />
         <UI v-if="show.showList[2].isShow" />
       </div>
     </div>
-    <div class="introduction-card-2" v-if="show.isDeepLearing">
-      <div class="introduction-card-2-back"></div>
-      <div class="introduction-card-2-front">
+    <div class="introduction-card_2" v-if="show.isDeepLearing">
+      <div class="introduction-card_2--back"></div>
+      <div class="introduction-card_2--front">
         <DeepLearning v-if="show.showList[4].isShow" />
       </div>
     </div>
@@ -27,8 +27,8 @@ import DeepLearning from "./CardBackground/DeepLearning";
 import { reactive, watch } from "vue";
 
 interface ShowList {
-  name: String;
-  isShow: Boolean;
+  name: "Android" | "deepLearning" | "UI" | "backEnd" | "lab" | "frontEnd";
+  isShow: boolean;
 }
 
 interface Show {
@@ -107,26 +107,28 @@ watch(
 
 <style lang="scss">
 .introduction-card {
-  &-1,
-  &-2 {
+  &_1,
+  &_2 {
     position: relative;
-    &-back {
-      width: 243.43px;
-      height: 372.67px;
-      border: 2px solid #f6c0ff;
-      box-sizing: border-box;
-      border-radius: 36px;
+    top: 100rpx;
+    left: 100rpx;
+    &--back,
+    &--front {
+      width: 446.86rpx;
+      height: 685.34rpx;
     }
-    &-front {
+    &--back {
+      border: 4rpx solid #f6c0ff;
+      box-sizing: border-box;
+      border-radius: 72rpx;
+    }
+    &--front {
       position: absolute;
       top: -42.17rpx;
       left: 49.97rpx;
-      width: 243.43px;
-      height: 372.67px;
 
-      // border: 1px solid rgba(217, 199, 255, 0.6);
       box-sizing: border-box;
-      border-radius: 36px;
+      border-radius: 72rpx;
       // transform-style: preserve-3d;
       // transition: 2s;
     }
@@ -135,8 +137,8 @@ watch(
     // }
   }
 
-  &-2 {
-    &-front {
+  &_2 {
+    &--front {
       top: 44.83rpx;
       left: 39.97rpx;
     }

@@ -1,29 +1,29 @@
 <template>
   <div class="ui-background">
     <image
-      class="ui-background-robot"
+      class="ui-background__robot"
       src="../../static/images/introduce_card/ui-robot.png"
       mode=""
     />
     <image
-      class="ui-background-white-star1"
+      class="ui-background__white-star1"
       src="../../static/images/introduce_card/white-star.png"
       mode=""
     />
     <image
-      class="ui-background-white-star2"
+      class="ui-background__white-star2"
       src="../../static/images/introduce_card/white-star.png"
       mode=""
     />
     <image
-      class="ui-background-white-star3"
+      class="ui-background__white-star3"
       src="../../static/images/introduce_card/white-star.png"
       mode=""
     />
     <UIText />
   </div>
   <image
-    class="ui-background-angle"
+    class="ui-background__angle"
     src="../../static/images/introduce_card/ui-angle.png"
     mode=""
   />
@@ -43,7 +43,7 @@ import UIText from "./TextShow/UIText";
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 36px;
+  border-radius: 72rpx;
   z-index: 2;
   background: linear-gradient(
       0deg,
@@ -57,43 +57,43 @@ import UIText from "./TextShow/UIText";
       rgba(235, 207, 255, 0.5) 60.33%,
       rgba(255, 183, 248, 0.5) 89.53%
     );
-  &-robot {
+  &__robot {
     position: absolute;
-    width: 210px;
-    height: 250px;
-    left: 90px;
-    top: -91px;
+    width: 420rpx;
+    height: 500rpx;
+    left: 180rpx;
+    top: -182rpx;
     background: url(.png);
   }
-  &-white-star1 {
+  &__white-star1 {
     position: absolute;
-    width: 57.24px;
-    height: 34.68px;
-    left: -18.06px;
-    top: 42.1px;
+    width: 114.48rpx;
+    height: 69.36rpx;
+    left: -36.12rpx;
+    top: 84.2rpx;
 
     transform: rotate(-91.35deg);
   }
-  &-white-star2 {
+  &__white-star2 {
     position: absolute;
-    width: 72px;
-    height: 103px;
-    left: 200px;
-    top: 172px;
+    width: 144rpx;
+    height: 206rpx;
+    left: 400rpx;
+    top: 344rpx;
   }
-  &-white-star3 {
+  &__white-star3 {
     position: absolute;
-    width: 45px;
-    height: 59px;
-    left: 202.59px;
-    top: 298.5px;
+    width: 90rpx;
+    height: 118rpx;
+    left: 405.18rpx;
+    top: 597rpx;
   }
-  &-angle {
+  &__angle {
     position: absolute;
-    width: 131.46px;
-    height: 66.66px;
-    top: 290px;
-    left: -45px;
+    width: 262.92rpx;
+    height: 133.32rpx;
+    top: 580rpx;
+    left: -90rpx;
     transform: rotate(0.08deg);
     z-index: 1;
   }

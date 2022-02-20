@@ -1,22 +1,22 @@
 <template>
   <div class="front-end-background">
     <image
-      class="front-end-background-white-star1"
+      class="front-end-background__white-star1"
       src="../../static/images/introduce_card/white-star.png"
       alt=""
     />
     <image
-      class="front-end-background-robot"
+      class="front-end-background__robot"
       alt=""
       src="../../static/images/introduce_card/front-end-robot.png"
     />
     <image
-      class="front-end-background-icon"
+      class="front-end-background__icon"
       alt=""
       src="../../static/images/introduce_card/front-end-icon.png"
     />
     <image
-      class="front-end-background-white-star2"
+      class="front-end-background__white-star2"
       src="../../static/images/introduce_card/white-star.png"
       alt=""
     />
@@ -53,38 +53,38 @@ import FrontEndText from "./TextShow/FrontEndText";
       rgba(187, 221, 251, 0.5) 83.87%,
       rgba(154, 207, 255, 0.5) 119.99%
     );
-  &-robot {
+  &__robot {
     position: absolute;
-    width: 147.11px;
-    height: 187.92px;
+    width: 294.22rpx;
+    height: 375.84rpx;
     background: url(.png);
     transform: rotate(1.28deg);
-    left: 145.62px;
-    top: 169.79px;
+    left: 291.24rpx;
+    top: 339.58rpx;
   }
-  &-icon {
+  &__icon {
     position: absolute;
-    width: 230px;
-    height: 201px;
+    width: 460rpx;
+    height: 402rpx;
     left: -30.94%;
     right: 28.86%;
     top: 65.43%;
   }
-  &-white-star1 {
+  &__white-star1 {
     position: absolute;
-    width: 69px;
-    height: 91px;
+    width: 138rpx;
+    height: 182rpx;
     left: -6.84%;
     right: 80.59%;
     top: -9.45%;
     bottom: 85.29%;
   }
-  &-white-star2 {
+  &__white-star2 {
     position: absolute;
-    width: 45px;
-    height: 59px;
-    left: 187.4px;
-    top: 308px;
+    width: 90rpx;
+    height: 118rpx;
+    left: 374.8rpx;
+    top: 616rpx;
   }
 }
 </style>

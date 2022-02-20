@@ -1,22 +1,22 @@
 <template>
   <div class="android-background">
     <image
-      class="android-background-white-star1"
+      class="android-background__white-star1"
       src="../../static/images/introduce_card/white-star.png"
       mode=""
     />
     <image
-      class="android-background-white-star2"
+      class="android-background__white-star2"
       src="../../static/images/introduce_card/white-star.png"
       mode=""
     />
     <image
-      class="android-background-white-star3"
+      class="android-background__white-star3"
       src="../../static/images/introduce_card/white-star.png"
       mode=""
     />
     <image
-      class="android-background-robot"
+      class="android-background__robot"
       src="../../static/images/introduce_card/android-robot.png"
       mode=""
     />
@@ -50,35 +50,35 @@ import AndroidText from "./TextShow/AndroidText";
       rgba(255, 228, 252, 0.5) 31.04%,
       rgba(235, 207, 255, 0.5) 100%
     );
-  border-radius: 36px;
-  &-white-star1 {
+  border-radius: 72rpx;
+  &__white-star1 {
     position: absolute;
-    width: 57.24px;
-    height: 34.68px;
-    left: -35.65px;
-    top: 334.02px;
+    width: 114.48rpx;
+    height: 69.36rpx;
+    left: -71.3rpx;
+    top: 668.04rpx;
     transform: rotate(-91.35deg);
   }
-  &-white-star2 {
+  &__white-star2 {
     position: absolute;
-    width: 53px;
-    height: 83.89px;
-    left: 203px;
-    top: -12.94px;
+    width: 106rpx;
+    height: 167.78rpx;
+    left: 406rpx;
+    top: -25.88rpx;
   }
-  &-white-star3 {
+  &__white-star3 {
     position: absolute;
-    width: 45px;
-    height: 59px;
-    left: 202px;
-    top: 301.02px;
+    width: 90rpx;
+    height: 118rpx;
+    left: 404rpx;
+    top: 602.04rpx;
   }
-  &-robot {
+  &__robot {
     position: absolute;
-    width: 238px;
-    height: 213px;
-    left: 58px;
-    top: 220px;
+    width: 476rpx;
+    height: 426rpx;
+    left: 116rpx;
+    top: 440rpx;
     background: url(.png);
   }
 }
