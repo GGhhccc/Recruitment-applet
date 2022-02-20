@@ -57,7 +57,6 @@ import BackEndText from "./TextShow/BackEndText";
     left: -43.3rpx;
     top: 284.02rpx;
     transform: matrix(-0.02, -1, 1, -0.03, 0, 0);
-    background: url(.png);
   }
   &__white-star2 {
     position: absolute;
@@ -72,7 +71,6 @@ import BackEndText from "./TextShow/BackEndText";
     height: 350.3rpx;
     left: -118.96rpx;
     top: 336.86rpx;
-    background: url(.png);
   }
   &__icon {
     position: absolute;
@@ -80,7 +78,6 @@ import BackEndText from "./TextShow/BackEndText";
     height: 286.68rpx;
     left: 250rpx;
     top: -162rpx;
-    background: url(.png);
   }
   &__angle {
     position: absolute;

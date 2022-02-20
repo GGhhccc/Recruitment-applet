@@ -79,7 +79,6 @@ import AndroidText from "./TextShow/AndroidText";
     height: 426rpx;
     left: 116rpx;
     top: 440rpx;
-    background: url(.png);
   }
 }
 </style>

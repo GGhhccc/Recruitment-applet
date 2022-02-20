@@ -57,7 +57,6 @@ import FrontEndText from "./TextShow/FrontEndText";
     position: absolute;
     width: 294.22rpx;
     height: 375.84rpx;
-    background: url(.png);
     transform: rotate(1.28deg);
     left: 291.24rpx;
     top: 339.58rpx;

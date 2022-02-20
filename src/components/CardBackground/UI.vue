@@ -63,7 +63,6 @@ import UIText from "./TextShow/UIText";
     height: 500rpx;
     left: 180rpx;
     top: -182rpx;
-    background: url(.png);
   }
   &__white-star1 {
     position: absolute;

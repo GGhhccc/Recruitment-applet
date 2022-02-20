@@ -59,7 +59,6 @@ import DeepLearningText from "./TextShow/DeepLearningText";
     height: 476.46rpx;
     left: 147.36rpx;
     top: 500.42rpx;
-    background: url(.png);
     z-index: 5;
   }
   &__white-star1 {
