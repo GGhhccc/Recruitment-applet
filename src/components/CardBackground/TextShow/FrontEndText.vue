@@ -12,7 +12,13 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+/*
+  @description 前端组介绍卡片具体内容
+  @author 梁国昊
+  @date 2022/2/20
+*/
+</script>
 
 <style lang="scss" scoped>
 .front-end-text {

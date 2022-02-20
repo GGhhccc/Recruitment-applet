@@ -25,6 +25,11 @@
 </template>
 
 <script setup lang="ts">
+/*
+  @description 安卓组介绍卡片
+  @author 梁国昊
+  @date 2022/2/20
+*/
 import AndroidText from "./TextShow/AndroidText";
 </script>
 

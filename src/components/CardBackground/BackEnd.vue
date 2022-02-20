@@ -30,6 +30,11 @@
 </template>
 
 <script setup lang="ts">
+/*
+  @description 后台组介绍卡片
+  @author 梁国昊
+  @date 2022/2/20
+*/
 import BackEndText from "./TextShow/BackEndText";
 </script>
 

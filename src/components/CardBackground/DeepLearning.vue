@@ -25,6 +25,11 @@
 </template>
 
 <script setup lang="ts">
+/*
+  @description 深度学习组介绍卡片
+  @author 梁国昊
+  @date 2022/2/20
+*/
 import DeepLearningText from "./TextShow/DeepLearningText";
 </script>
 

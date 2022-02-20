@@ -25,6 +25,11 @@
 </template>
 
 <script setup lang="ts" scoped>
+/*
+  @description 前端组介绍卡片
+  @author 梁国昊
+  @date 2022/2/20
+*/
 import FrontEndText from "./TextShow/FrontEndText";
 </script>
 
