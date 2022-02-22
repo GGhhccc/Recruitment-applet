@@ -9,8 +9,8 @@
       软件的开发包括原生开发和跨平台多端开发。
     </div>
     <div class="android-text__3">
-      其多样的开发方式能让我们能学到多种开发技术和创造出更 多的可能。学习好
-      开发，用技术创造 艺术。
+      其多样的开发方式能让我们能学到多种开发技术和创造出更多的可能。学习好
+      开发，用技术创造艺术。
     </div>
   </div>
 </template>
@@ -19,7 +19,7 @@
 /*
   @description 安卓组介绍卡片具体内容
   @author 梁国昊
-  @date 2022/2/20
+  @date 2022/2/22
 */
 </script>
 
@@ -28,7 +28,7 @@
   // font-family: OPPOSans;
   font-style: normal;
   font-weight: normal;
-  font-size: 28rpx;
+  font-size: 26rpx;
   line-height: 40rpx;
   letter-spacing: -0.6rpx;
   color: #7b797a;
@@ -39,11 +39,11 @@
     color: #5a8ced;
   }
   &__2 {
-    margin-top: 10rpx;
+    margin-top: 6rpx;
   }
   &__3 {
-    margin-top: 10rpx;
-    padding-right: 140rpx;
+    margin-top: 6rpx;
+    padding-right: 118rpx;
   }
 }
 </style>

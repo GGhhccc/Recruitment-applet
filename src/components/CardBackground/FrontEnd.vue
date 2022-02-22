@@ -28,7 +28,7 @@
 /*
   @description 前端组介绍卡片
   @author 梁国昊
-  @date 2022/2/20
+  @date 2022/2/22
 */
 import FrontEndText from "./TextShow/FrontEndText";
 </script>
@@ -63,11 +63,11 @@ import FrontEndText from "./TextShow/FrontEndText";
   }
   &__icon {
     position: absolute;
-    width: 460rpx;
-    height: 402rpx;
-    left: -30.94%;
+    width: 453rpx;
+    height: 390rpx;
+    left: -32.94%;
     right: 28.86%;
-    top: 65.43%;
+    top: 72.43%;
   }
   &__white-star1 {
     position: absolute;

@@ -17,7 +17,7 @@
 /*
   @description 设计组介绍卡片具体内容
   @author 梁国昊
-  @date 2022/2/20 
+  @date 2022/2/22
 */
 </script>
 
@@ -26,7 +26,7 @@
   // font-family: OPPOSans;
   font-style: normal;
   font-weight: normal;
-  font-size: 28rpx;
+  font-size: 26rpx;
   line-height: 40rpx;
   letter-spacing: -0.6rpx;
   color: #7b797a;
@@ -37,7 +37,7 @@
     color: #ae6cda;
   }
   &__1 {
-    padding-right: 152rpx;
+    padding-right: 130rpx;
   }
   &__hl {
     display: inline;

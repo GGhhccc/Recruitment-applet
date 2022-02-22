@@ -19,11 +19,27 @@
 </template>
 
 <script setup lang="ts">
+/**
+ * @description 小组卡片介绍组件
+ * @author 梁国昊
+ * @date 2022/2/22
+ */
+
+// 引入前端卡片
 import FrontEnd from "./CardBackground/FrontEnd";
+
+// 引入后台卡片
 import BackEnd from "./CardBackground/BackEnd";
+
+// 引入安卓卡片
 import Android from "./CardBackground/Android";
+
+// 引入UI卡片
 import UI from "./CardBackground/UI";
+
+// 引入深度学习卡片
 import DeepLearning from "./CardBackground/DeepLearning";
+
 import { reactive, watch } from "vue";
 
 interface ShowList {
@@ -107,6 +123,7 @@ watch(
 
 <style lang="scss">
 .introduction-card {
+  margin: 50px;
   &_1,
   &_2 {
     position: relative;

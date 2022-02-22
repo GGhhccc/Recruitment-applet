@@ -16,7 +16,7 @@
 /* 
   @description 前端组介绍卡片具体内容
   @author 梁国昊
-  @date 2022/2/20
+  @date 2022/2/22
 */
 </script>
 
@@ -26,8 +26,8 @@
   // font-family: OPPOSans;
   font-style: normal;
   font-weight: normal;
-  font-size: 28rpx;
-  line-height: 40rpx;
+  font-size: 26rpx;
+  line-height: 43rpx;
   letter-spacing: -0.6rpx;
   color: #7b797a;
   &__title {
@@ -42,7 +42,7 @@
     width: 330rpx;
   }
   &__3 {
-    margin-left: 100rpx;
+    margin-left: 140rpx;
     margin-top: 15rpx;
     width: 207rpx;
   }
