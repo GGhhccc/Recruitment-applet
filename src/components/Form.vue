@@ -146,7 +146,7 @@ const isApplyed = ref(false); //是否报名成功
 const props = defineProps({
   disabled: Boolean,
 });
-const isShowForm = computed(() => (props.disabled as boolean) || true); //是否显示报名组件报名组件 默认不展示
+const isShowForm = computed(() => (props.disabled as boolean) || false); //是否显示报名组件报名组件 默认不展示
 
 /**
  * @description 表单验证

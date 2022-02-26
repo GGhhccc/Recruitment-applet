@@ -1,10 +1,6 @@
 <template>
-  <view class="safe-area">
-    <Form :disabled="true"></Form>
-  </view>
+  <view class="safe-area"> </view>
 </template>
-<script setup lang="ts">
-import Form from "../../components/Form.vue";
-</script>
+<script setup lang="ts"></script>
 
 <style></style>
