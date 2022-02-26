@@ -21,7 +21,7 @@
 <style lang="scss" scoped>
 .deep-learning-text {
   padding: 112rpx 30rpx 60rpx 44rpx;
-  // font-family: OPPOSans;
+  font-family: OPPOSans;
   font-style: normal;
   font-weight: normal;
   font-size: 26rpx;

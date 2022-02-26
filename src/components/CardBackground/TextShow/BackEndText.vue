@@ -18,7 +18,7 @@
 
 <style lang="scss">
 .back-end-text {
-  // font-family: OPPOSans;
+  font-family: OPPOSans;
   font-style: normal;
   font-weight: normal;
   font-size: 26rpx;

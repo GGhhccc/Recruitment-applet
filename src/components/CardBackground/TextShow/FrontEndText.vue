@@ -23,7 +23,7 @@
 <style lang="scss" scoped>
 .front-end-text {
   padding: 85rpx 40rpx 70rpx 49.03rpx;
-  // font-family: OPPOSans;
+  font-family: OPPOSans;
   font-style: normal;
   font-weight: normal;
   font-size: 26rpx;
