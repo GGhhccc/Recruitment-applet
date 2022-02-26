@@ -1,12 +1,6 @@
 <template>
-  <view class="safe-area">
-    <GroupToIntroduce :cardName="cardName"></GroupToIntroduce>
-  </view>
+  <view class="safe-area"> </view>
 </template>
-<script setup lang="ts">
-import { ref } from "vue";
-import GroupToIntroduce from "../../components/GroupToIntroduce";
-const cardName = ref("UI");
-</script>
+<script setup lang="ts"></script>
 
 <style></style>
