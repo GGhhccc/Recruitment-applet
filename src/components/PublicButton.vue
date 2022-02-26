@@ -16,8 +16,8 @@ const props = withDefaults(defineProps<Props>(), {
 <style lang="scss">
 .button {
   width: 228rpx;
-  height: 44px;
-  line-height: 44px;
+  height: 88rpx;
+  line-height: 88rpx;
   border: 2rpx solid #ffffff;
   border-radius: 10px;
   background: radial-gradient(
@@ -26,7 +26,8 @@ const props = withDefaults(defineProps<Props>(), {
     rgba(223, 193, 253, 0) 100%
   );
   font-family: OPPOSans;
-  font-size: 18px;
+  font-size: 38rpx;
   color: v-bind("props.color");
+  box-sizing: border-box;
 }
 </style>
