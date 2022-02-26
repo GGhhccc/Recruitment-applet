@@ -1,7 +1,7 @@
 <template>
   <view
     class="welcome"
-    :style="{ height: isShowAnimation ? '260rpx' : '100vh' }"
+    :style="{ height: isShowAnimation ? '240rpx' : '100vh' }"
   >
     <view
       :class="['welcome__text', { 'welcome__text-animation': isShowAnimation }]"
@@ -32,9 +32,15 @@
     </view>
     <view
       :class="['welcome__logo', { 'welcome__logo-animation': isShowAnimation }]"
+      ref="logo"
       @click="(isShowAnimation = true), $emit('click')"
     >
-      <view v-if="!isShowAnimation" class="welcome__logo__shadow-wrap"></view>
+      <view
+        :class="[
+          'welcome__logo__shadow-wrap',
+          { 'welcome__logo__shadow-wrap-animation': isShowAnimation },
+        ]"
+      ></view>
       <image
         class="welcome__logo__image"
         src="../static/images/welcomeLogo.png"
@@ -44,9 +50,9 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, watch } from "vue";
+import { ref, watch, onMounted } from "vue";
 
-defineProps<{
+defineEmits<{
   (e: "click"): void;
 }>();
 
@@ -72,16 +78,30 @@ watch(
 }
 @keyframes logo-animation {
   0% {
-    top: 1080rpx;
+    top: 73%;
   }
   30% {
-    top: 1102rpx;
+    top: 78%;
   }
   70% {
-    top: 0;
+    top: -40rpx;
   }
   100% {
-    top: 38rpx;
+    top: -20rpx;
+  }
+}
+@keyframes logo__shadow-wrap-animation {
+  0% {
+    border-radius: 48rpx;
+    box-shadow: inset 0 -12px 14px -7px rgba(0, 0, 0, 0.3);
+  }
+  30% {
+    border-radius: 48rpx;
+    box-shadow: inset 0 -12px 14px -7px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    border-radius: 0;
+    box-shadow: none;
   }
 }
 
@@ -124,7 +144,7 @@ watch(
   &__lab-name {
     position: fixed;
     left: 50%;
-    top: 206rpx;
+    top: 142rpx;
     z-index: 1;
     font-family: OPPOSans;
     font-size: 18px;
@@ -137,7 +157,7 @@ watch(
   &__logo {
     position: fixed;
     left: 50%;
-    top: 1080rpx;
+    top: 73%;
     height: 206rpx;
     border-radius: 48rpx;
     transform: translateX(-50%);
@@ -155,6 +175,10 @@ watch(
   }
   &__logo-animation {
     animation: logo-animation 0.7s ease 0s 1 normal forwards running;
+  }
+  &__logo__shadow-wrap-animation {
+    animation: logo__shadow-wrap-animation 0.7s ease 0s 1 normal forwards
+      running;
   }
 }
 </style>
