@@ -1,5 +1,5 @@
 <template>
-  <view class="safe-area"></view>
+  <view class="safe-area"> </view>
 </template>
 <script setup lang="ts"></script>
 
