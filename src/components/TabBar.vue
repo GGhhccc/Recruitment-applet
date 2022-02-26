@@ -131,10 +131,10 @@ const setCurrentTabBarList = (
     display: flex;
     align-items: center;
     &__minor-image {
-      height: 80px;
+      height: 160rpx;
     }
     &__main-image {
-      height: 140px;
+      height: 280rpx;
     }
   }
 }
