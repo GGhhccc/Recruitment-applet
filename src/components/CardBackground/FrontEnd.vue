@@ -6,7 +6,7 @@
       alt=""
     />
     <image
-      class="front-end-background__robot"
+      class="front-end-background__robot front-end-background__robot-animation"
       alt=""
       src="../../static/images/introduce_card/front-end-robot.png"
     />
@@ -30,10 +30,19 @@
   @author 梁国昊
   @date 2022/2/22
 */
-import FrontEndText from "./TextShow/FrontEndText";
+import FrontEndText from "./TextShow/FrontEndText.vue";
 </script>
 
 <style lang="scss">
+@keyframes robot-animation {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
 .front-end-background {
   position: relative;
   width: 100%;
@@ -60,6 +69,9 @@ import FrontEndText from "./TextShow/FrontEndText";
     transform: rotate(1.28deg);
     left: 291.24rpx;
     top: 339.58rpx;
+  }
+  &__robot-animation {
+    animation: robot-animation 1.5s ease 0s infinite alternate running;
   }
   &__icon {
     position: absolute;

@@ -16,7 +16,7 @@
       mode=""
     />
     <image
-      class="android-background__robot"
+      class="android-background__robot android-background__robot-animation"
       src="../../static/images/introduce_card/android-robot.png"
       mode=""
     />
@@ -30,10 +30,19 @@
   @author 梁国昊
   @date 2022/2/20
 */
-import AndroidText from "./TextShow/AndroidText";
+import AndroidText from "./TextShow/AndroidText.vue";
 </script>
 
 <style lang="scss" scoped>
+@keyframes robot-animation {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
 .android-background {
   position: relative;
   width: 100%;
@@ -79,6 +88,9 @@ import AndroidText from "./TextShow/AndroidText";
     height: 426rpx;
     left: 116rpx;
     top: 440rpx;
+  }
+  &__robot-animation {
+    animation: robot-animation 1.5s ease 0s infinite alternate running;
   }
 }
 </style>

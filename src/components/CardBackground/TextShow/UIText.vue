@@ -25,7 +25,7 @@
 .ui-text {
   font-family: OPPOSans;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 26rpx;
   line-height: 40rpx;
   letter-spacing: -0.6rpx;

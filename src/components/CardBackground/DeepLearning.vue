@@ -30,7 +30,7 @@
   @author 梁国昊
   @date 2022/2/20
 */
-import DeepLearningText from "./TextShow/DeepLearningText";
+import DeepLearningText from "./TextShow/DeepLearningText.vue";
 </script>
 
 <style lang="scss" scoped>

@@ -5,7 +5,7 @@
       src="../../static/images/introduce_card/white-star.png"
     />
     <image
-      class="back-end-background__robot"
+      class="back-end-background__robot back-end-background__robot-animation"
       src="../../static/images/introduce_card/back-end-robot.png"
     />
     <image
@@ -30,10 +30,19 @@
   @author 梁国昊
   @date 2022/2/20
 */
-import BackEndText from "./TextShow/BackEndText";
+import BackEndText from "./TextShow/BackEndText.vue";
 </script>
 
 <style lang="scss">
+@keyframes robot-animation {
+  0% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+
 .back-end-background {
   width: 100%;
   height: 100%;
@@ -71,6 +80,9 @@ import BackEndText from "./TextShow/BackEndText";
     height: 350.3rpx;
     left: -118.96rpx;
     top: 336.86rpx;
+  }
+  &__robot-animation {
+    animation: robot-animation 1.5s ease 0s infinite alternate running;
   }
   &__icon {
     position: absolute;

@@ -20,7 +20,7 @@
 .back-end-text {
   font-family: OPPOSans;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 26rpx;
   line-height: 48rpx;
   letter-spacing: -0.6rpx;

@@ -23,7 +23,7 @@
   padding: 112rpx 30rpx 60rpx 44rpx;
   font-family: OPPOSans;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 26rpx;
   line-height: 48rpx;
   letter-spacing: -0.6rpx;

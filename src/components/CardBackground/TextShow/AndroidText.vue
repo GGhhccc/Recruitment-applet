@@ -27,8 +27,8 @@
 .android-text {
   font-family: OPPOSans;
   font-style: normal;
-  font-weight: normal;
   font-size: 26rpx;
+  font-weight: bold;
   line-height: 40rpx;
   letter-spacing: -0.6rpx;
   color: #7b797a;

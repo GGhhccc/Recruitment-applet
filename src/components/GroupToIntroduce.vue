@@ -26,19 +26,19 @@
  */
 
 // 引入前端卡片
-import FrontEnd from "./CardBackground/FrontEnd";
+import FrontEnd from "./CardBackground/FrontEnd.vue";
 
 // 引入后台卡片
-import BackEnd from "./CardBackground/BackEnd";
+import BackEnd from "./CardBackground/BackEnd.vue";
 
 // 引入安卓卡片
-import Android from "./CardBackground/Android";
+import Android from "./CardBackground/Android.vue";
 
 // 引入UI卡片
-import UI from "./CardBackground/UI";
+import UI from "./CardBackground/UI.vue";
 
 // 引入深度学习卡片
-import DeepLearning from "./CardBackground/DeepLearning";
+import DeepLearning from "./CardBackground/DeepLearning.vue";
 
 import { reactive, watch } from "vue";
 
@@ -137,25 +137,20 @@ watch(
       box-sizing: border-box;
       border-radius: 72rpx;
     }
-    &--front {
+    &--back {
       position: absolute;
-      top: -42.17rpx;
-      left: 49.97rpx;
+      top: 0;
+      left: 0;
+      transform: translate(-8%, 6%);
 
       box-sizing: border-box;
       border-radius: 72rpx;
-      // transform-style: preserve-3d;
-      // transition: 2s;
     }
-    // &-front:hover {
-    //   transform: rotateY(180deg);
-    // }
   }
 
   &_2 {
-    &--front {
-      top: 44.83rpx;
-      left: 39.97rpx;
+    &--back {
+      transform: translate(-8%, -5%);
     }
   }
 }

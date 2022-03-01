@@ -142,77 +142,116 @@
         { 'lab-to-introduce__text-box-5-animation': animationStatusList[4] },
       ]"
     >
-      <PublicButton @click="$emit('click')">加入我们</PublicButton></view
+      <PublicButton
+        v-if="isUseButton"
+        :disabled="isDisableButton"
+        @click="$emit('click')"
+        >加入我们</PublicButton
+      ></view
     >
   </view>
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import PublicButton from "./PublicButton.vue";
+import { checkState } from "../api/formUpdate";
 
-defineEmits<{
+const props = defineProps<{
+  run: boolean;
+}>();
+const emits = defineEmits<{
   (e: "click"): void;
+  (e: "done"): void;
 }>();
 
+const isUseButton = ref(true);
+checkState().then((res: any) => {
+  if (res.data.code === "200") {
+    if (res.data.msg == "0") {
+      isUseButton.value = false;
+    }
+  }
+});
+const isDisableButton = ref(true);
 const animationStatusList = ref([false, false, false, false, false]);
 const animationHandler = () => {
   let currentIndex = 0;
   return () => {
-    animationStatusList.value[currentIndex] = true;
-    currentIndex++;
+    animationStatusList.value.forEach((item, index) => {
+      index === 0 && (animationStatusList.value[0] = true);
+      if (index !== 0) {
+        let runtime = 2000;
+        index === 4 && (runtime = 1750);
+        setTimeout(() => {
+          animationStatusList.value[index] = true;
+          currentIndex++;
+          if (animationStatusList.value[4]) {
+            setTimeout(() => {
+              isDisableButton.value = false;
+              emits("done");
+            }, 1000);
+          }
+        }, index * runtime);
+      }
+    });
   };
 };
 const runAnimation = animationHandler();
-runAnimation();
-const intervalFlag = setInterval(() => {
-  runAnimation();
-  if (animationStatusList.value[3]) {
-    setTimeout(runAnimation, 1000);
-    clearInterval(intervalFlag);
+watch(
+  () => props.run,
+  (val) => {
+    if (val) {
+      runAnimation();
+    }
   }
-}, 4000);
+);
 </script>
 
 <style lang="scss">
 @keyframes text-1-animation {
   0% {
-    top: 290rpx;
-    left: 90rpx;
+    top: 310rpx;
+    left: 110rpx;
     width: 334rpx;
     font-size: 48rpx;
+    letter-spacing: -0.6rpx;
     line-height: 64rpx;
     color: #716969;
   }
   70% {
-    top: 290rpx;
-    left: 90rpx;
+    top: 310rpx;
+    left: 110rpx;
     width: 334rpx;
     font-size: 48rpx;
+    letter-spacing: -0.6rpx;
     line-height: 64rpx;
     color: #716969;
   }
   80% {
-    top: 300rpx;
-    left: 100rpx;
+    top: 320rpx;
+    left: 120rpx;
     width: 334rpx;
     font-size: 48rpx;
+    letter-spacing: -0.6rpx;
     line-height: 64rpx;
     color: #716969;
   }
-  90% {
+  95% {
     top: 34rpx;
     left: 50rpx;
-    width: 368rpx;
+    width: 380rpx;
     font-size: 28rpx;
+    letter-spacing: -0.6rpx;
     line-height: 36rpx;
     color: #958f8f;
   }
   100% {
     top: 40rpx;
     left: 56rpx;
-    width: 368rpx;
+    width: 380rpx;
     font-size: 28rpx;
+    letter-spacing: -0.6rpx;
     line-height: 36rpx;
     color: #958f8f;
   }
@@ -233,7 +272,7 @@ const intervalFlag = setInterval(() => {
   20% {
     opacity: 1;
   }
-  99% {
+  95% {
     left: 54rpx;
     top: 298rpx;
     width: 354rpx;
@@ -248,7 +287,7 @@ const intervalFlag = setInterval(() => {
   100% {
     top: 110rpx;
     left: 56rpx;
-    width: 368rpx;
+    width: 380rpx;
     font-size: 28rpx;
     line-height: 36rpx;
     color: #958f8f;
@@ -259,7 +298,7 @@ const intervalFlag = setInterval(() => {
   0% {
     font-size: 48rpx;
   }
-  99% {
+  95% {
     font-size: 48rpx;
   }
   100% {
@@ -270,7 +309,7 @@ const intervalFlag = setInterval(() => {
   0% {
     color: #5c7ae7;
   }
-  99% {
+  95% {
     color: #5c7ae7;
   }
   100% {
@@ -281,7 +320,7 @@ const intervalFlag = setInterval(() => {
   0% {
     color: #8345e9;
   }
-  99% {
+  95% {
     color: #8345e9;
   }
   100% {
@@ -292,7 +331,7 @@ const intervalFlag = setInterval(() => {
   0% {
     color: #766de2;
   }
-  99% {
+  95% {
     color: #766de2;
   }
   100% {
@@ -315,7 +354,7 @@ const intervalFlag = setInterval(() => {
   20% {
     opacity: 1;
   }
-  99% {
+  95% {
     left: 60rpx;
     top: 316rpx;
     width: 356rpx;
@@ -330,7 +369,7 @@ const intervalFlag = setInterval(() => {
   100% {
     top: 216rpx;
     left: 56rpx;
-    width: 368rpx;
+    width: 380rpx;
     font-size: 28rpx;
     line-height: 36rpx;
     color: #958f8f;
@@ -341,7 +380,7 @@ const intervalFlag = setInterval(() => {
   0% {
     color: #d774b5;
   }
-  99% {
+  95% {
     color: #d774b5;
   }
   100% {
@@ -352,7 +391,7 @@ const intervalFlag = setInterval(() => {
   0% {
     color: #dd89fb;
   }
-  99% {
+  95% {
     color: #dd89fb;
   }
   100% {
@@ -384,9 +423,9 @@ const intervalFlag = setInterval(() => {
 
 .lab-to-introduce {
   position: relative;
-  width: 480rpx;
-  height: 756rpx;
-  padding: 36rpx 56rpx;
+  width: 500rpx;
+  height: 840rpx;
+  padding: 40rpx 60rpx;
   background: rgba(255, 255, 255, 0.71);
   border: 2rpx solid rgba(255, 203, 247, 0.57);
   border-radius: 40rpx;
@@ -394,28 +433,26 @@ const intervalFlag = setInterval(() => {
   box-sizing: border-box;
   &__text-box {
     position: absolute;
-    width: 368rpx;
+    width: 380rpx;
     font-family: OPPOSans;
     font-size: 28rpx;
-    font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 36rpx;
     text-align: left;
-    letter-spacing: -0.3px;
     color: #958f8f;
   }
   &__text-box-1 {
-    top: 290rpx;
-    left: 90rpx;
+    top: 310rpx;
+    left: 110rpx;
     width: 334rpx;
     font-family: OPPOSans;
-    font-size: 44rpx;
+    font-size: 48rpx;
+    letter-spacing: -0.6rpx;
     line-height: 64rpx;
-    letter-spacing: -0.3px;
     color: #716969;
   }
   &__text-box-1-animation {
-    animation: text-1-animation 2s ease 0s 1 normal forwards running;
+    animation: text-1-animation 1s ease 0s 1 normal forwards running;
   }
   &__text-box-2 {
     left: 54rpx;
@@ -425,7 +462,6 @@ const intervalFlag = setInterval(() => {
     font-size: 32rpx;
     line-height: 48rpx;
     text-align: center;
-    letter-spacing: -0.3px;
     color: #716969;
     opacity: 0;
     &__text-1 {
@@ -445,19 +481,19 @@ const intervalFlag = setInterval(() => {
     }
   }
   &__text-box-2-animation {
-    animation: text-2-animation 2s ease 0s 1 normal forwards running;
+    animation: text-2-animation 1s ease 0s 1 normal forwards running;
   }
   &__text-box-2__text-1-animation-1 {
-    animation: text-2__text-1-animation-1 2s ease 0s 1 normal forwards running;
+    animation: text-2__text-1-animation-1 1s ease 0s 1 normal forwards running;
   }
   &__text-box-2__text-1-animation-2 {
-    animation: text-2__text-1-animation-2 2s ease 0s 1 normal forwards running;
+    animation: text-2__text-1-animation-2 1s ease 0s 1 normal forwards running;
   }
   &__text-box-2__text-1-animation-3 {
-    animation: text-2__text-1-animation-3 2s ease 0s 1 normal forwards running;
+    animation: text-2__text-1-animation-3 1s ease 0s 1 normal forwards running;
   }
   &__text-box-2__text-1-animation-4 {
-    animation: text-2__text-1-animation-4 2s ease 0s 1 normal forwards running;
+    animation: text-2__text-1-animation-4 1s ease 0s 1 normal forwards running;
   }
   &__text-box-3 {
     left: 60rpx;
@@ -467,7 +503,6 @@ const intervalFlag = setInterval(() => {
     font-size: 32rpx;
     line-height: 48rpx;
     text-align: center;
-    letter-spacing: -0.3px;
     color: #716969;
     opacity: 0;
     &__text-1 {
@@ -480,23 +515,23 @@ const intervalFlag = setInterval(() => {
     }
   }
   &__text-box-3-animation {
-    animation: text-3-animation 2s ease 0s 1 normal forwards running;
+    animation: text-3-animation 1s ease 0s 1 normal forwards running;
   }
   &__text-box-3__text-1-animation-1 {
-    animation: text-3__text-1-animation-1 2s ease 0s 1 normal forwards running;
+    animation: text-3__text-1-animation-1 1s ease 0s 1 normal forwards running;
   }
   &__text-box-3__text-1-animation-2 {
-    animation: text-3__text-1-animation-2 2s ease 0s 1 normal forwards running;
+    animation: text-3__text-1-animation-2 1s ease 0s 1 normal forwards running;
   }
   &__text-box-4 {
-    left: 33rpx;
-    top: 386rpx;
-    width: 410rpx;
+    left: 46rpx;
+    top: 400rpx;
+    width: 420rpx;
     font-family: OPPOSans;
-    font-size: 32rpx;
+    font-size: 36rpx;
     line-height: 48rpx;
     text-align: center;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.6rpx;
     color: #716969;
     opacity: 0;
   }

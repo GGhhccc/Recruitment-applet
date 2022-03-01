@@ -2,30 +2,30 @@
   <view class="tab-bar">
     <view class="tab-bar__item">
       <image
-        mode="heightFix"
+        mode="widthFix"
         class="tab-bar__item__minor-image"
         :src="getImageSrcByType(currentTabBarTypeList[0])"
         @click="
-          setCurrentTabBarList(currentTabBarTypeList[0], 'left'),
-            $emit('click', currentTabBarTypeList[0])
+          !props.disabled && $emit('click', currentTabBarTypeList[0]),
+            setCurrentTabBarList(currentTabBarTypeList[0], 'left')
         "
       ></image>
     </view>
     <view class="tab-bar__item">
       <image
-        mode="heightFix"
+        mode="widthFix"
         class="tab-bar__item__main-image"
         :src="getImageSrcByType(currentTabBarTypeList[1], true)"
       ></image>
     </view>
     <view class="tab-bar__item">
       <image
-        mode="heightFix"
+        mode="widthFix"
         class="tab-bar__item__minor-image"
         :src="getImageSrcByType(currentTabBarTypeList[2])"
         @click="
-          setCurrentTabBarList(currentTabBarTypeList[2], 'right'),
-            $emit('click', currentTabBarTypeList[0])
+          !props.disabled && $emit('click', currentTabBarTypeList[2]),
+            setCurrentTabBarList(currentTabBarTypeList[2], 'right')
         "
       ></image>
     </view>
@@ -48,6 +48,9 @@ interface TabBarListItem {
   minor: string;
 }
 
+const props = defineProps<{
+  disabled: boolean;
+}>();
 defineEmits<{
   (e: "click", type: TabBarListType): void;
 }>();
@@ -72,7 +75,7 @@ const tabBarList: TabBarListItem[] = [
   {
     type: "backEnd",
     main: "../static/images/tabBarBackEndMainImage.png",
-    minor: "../static/images/tabBarBackEndMinorImage.png",
+    minor: "../static/images/tabBarBackEndMainImage.png",
   },
   {
     type: "lab",
@@ -106,18 +109,24 @@ const setCurrentTabBarList = (
   type: TabBarListType,
   addition: "left" | "right"
 ) => {
+  if (props.disabled) return;
+
   let index = totalTabBarTypeList.indexOf(type);
-  if (index === totalTabBarTypeList.length - 1) {
-    index = 0;
-  } else if (index === 0) {
-    index = totalTabBarTypeList.length - 1;
+  if (index === totalTabBarTypeList.length - 1 && addition === "right") {
+    index = -1;
+  } else if (index === 0 && addition === "left") {
+    index = totalTabBarTypeList.length;
   }
   if (addition === "left") {
-    currentTabBarTypeList.value.pop();
-    currentTabBarTypeList.value.unshift(totalTabBarTypeList[index - 1]);
+    setTimeout(() => {
+      currentTabBarTypeList.value.pop();
+      currentTabBarTypeList.value.unshift(totalTabBarTypeList[index - 1]);
+    }, 300);
   } else {
-    currentTabBarTypeList.value.shift();
-    currentTabBarTypeList.value.push(totalTabBarTypeList[index + 1]);
+    setTimeout(() => {
+      currentTabBarTypeList.value.shift();
+      currentTabBarTypeList.value.push(totalTabBarTypeList[index + 1]);
+    }, 300);
   }
 };
 </script>
@@ -125,16 +134,17 @@ const setCurrentTabBarList = (
 <style lang="scss">
 .tab-bar {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 20rpx;
   width: 100vw;
   &__item {
     display: flex;
     align-items: center;
     &__minor-image {
-      height: 160rpx;
+      width: 200rpx;
     }
     &__main-image {
-      height: 280rpx;
+      width: 215rpx;
     }
   }
 }

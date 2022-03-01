@@ -10,35 +10,35 @@ export const requestIntercaptor = (options: UniApp.RequestOptions) => {
   return options;
 };
 // 响应拦截
-const responseIntercaptor = ({ data }: { data:any }) => {
+const responseIntercaptor = ({ data }: { data: any }) => {
   const code = parseInt(data.code as string);
   switch (code) {
-    case 404:
+    case 101:
       uni.showToast({
-        title:'访问的资源不存在'
+        title: "报名已截止",
       });
       break;
     case 200:
       break;
     default:
       uni.showToast({
-        title:''
-      })
+        title: "",
+      });
       break;
   }
 };
 
 // 错误拦截
 // 请求超时的情况在这里拦截
-const errorIntercaptor = (err: any) => {
+const errorIntercaptor = () => {
   uni.showToast({
-    title:"请求超时"
-  })
+    title: "请求超时，稍后再试试吧~",
+  });
 };
 
 uni.addInterceptor("request", {
-  fail(err) {
-    errorIntercaptor(err);
+  fail() {
+    errorIntercaptor();
   },
   success(res) {
     responseIntercaptor(res);

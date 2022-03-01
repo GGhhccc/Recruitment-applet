@@ -1,7 +1,8 @@
 <template>
   <view
+    v-show="isShowView"
     class="welcome"
-    :style="{ height: isShowAnimation ? '240rpx' : '100vh' }"
+    :class="{ 'welcome-animation': isShowAnimation }"
   >
     <view
       :class="['welcome__text', { 'welcome__text-animation': isShowAnimation }]"
@@ -16,24 +17,32 @@
     <view
       v-if="isShowCentralImage"
       class="welcome__central-image"
-      :style="{ opacity: isShowAnimation ? 0 : 1 }"
+      :style="{
+        opacity: isShowAnimation ? 0 : 1,
+        transition: isShowAnimation ? 'opacity 0.2s 0.3s' : 'none',
+      }"
     >
       <image
         class="welcome__central-image__image"
         src="../static/images/welcomeImage.png"
         mode="widthFix"
+        @load="isShowView = true"
       />
     </view>
     <view
       class="welcome__lab-name"
-      :style="{ opacity: isShowAnimation ? 1 : 0 }"
+      :style="{
+        opacity: isShowAnimation ? 1 : 0,
+        transition: isShowAnimation ? 'opacity 0.2s 0.3s' : 'none',
+      }"
     >
       <text>数智工作室</text>
+      <text class="welcome__lab-name__tip">点击下方的星球有惊喜哦</text>
     </view>
     <view
       :class="['welcome__logo', { 'welcome__logo-animation': isShowAnimation }]"
       ref="logo"
-      @click="(isShowAnimation = true), $emit('click')"
+      @click="(isShowAnimation = true), exposeEmit()"
     >
       <view
         :class="[
@@ -50,21 +59,36 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, watch, onMounted } from "vue";
+import { ref, watch } from "vue";
 
-defineEmits<{
+const emits = defineEmits<{
   (e: "click"): void;
 }>();
 
+const isShowView = ref(false);
 const isShowAnimation = ref(false);
 const isShowCentralImage = ref(true);
 watch(
   () => isShowAnimation.value,
-  (val) => val && setTimeout(() => (isShowCentralImage.value = false), 300)
+  (val) => val && setTimeout(() => (isShowCentralImage.value = false), 1000)
 );
+const exposeEmit = () => {
+  setTimeout(() => emits("click"), 500);
+};
 </script>
 
 <style lang="scss">
+@keyframes welcome-animation {
+  0% {
+    height: 100vh;
+  }
+  99% {
+    height: 100vh;
+  }
+  100% {
+    height: 240rpx;
+  }
+}
 @keyframes welcome-text-animation {
   0% {
     top: 58rpx;
@@ -73,7 +97,7 @@ watch(
     top: 80rpx;
   }
   100% {
-    top: -250rpx;
+    top: -280rpx;
   }
 }
 @keyframes logo-animation {
@@ -93,11 +117,11 @@ watch(
 @keyframes logo__shadow-wrap-animation {
   0% {
     border-radius: 48rpx;
-    box-shadow: inset 0 -12px 14px -7px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 -12px 14px -7px rgba(0, 0, 0, 0.1);
   }
   30% {
     border-radius: 48rpx;
-    box-shadow: inset 0 -12px 14px -7px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 -12px 14px -7px rgba(0, 0, 0, 0.1);
   }
   100% {
     border-radius: 0;
@@ -106,15 +130,21 @@ watch(
 }
 
 .welcome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 12;
   width: 100vh;
   height: 100vh;
+  font-weight: bold;
   &__text {
     position: fixed;
     left: 54rpx;
     top: 58rpx;
     display: flex;
     flex-direction: column;
-    gap: 20rpx;
+    gap: 15rpx;
+    height: 120px;
     &__hello {
       font-family: OPPOSans;
       font-size: 84rpx;
@@ -122,6 +152,7 @@ watch(
     }
     &__explore-text {
       font-family: OPPOSans;
+      line-height: 50rpx;
       font-size: 40rpx;
       color: #a7a7a7;
     }
@@ -139,20 +170,33 @@ watch(
     width: 750rpx;
     height: 886rpx;
     transform: translate(-50%, -50%);
-    transition: opacity 0.2s 0.3s;
   }
   &__lab-name {
+    display: flex;
+    flex-direction: column;
+    gap: 15rpx;
     position: fixed;
     left: 50%;
-    top: 142rpx;
+    top: 156rpx;
     z-index: 1;
     font-family: OPPOSans;
+    font-weight: bold;
     font-size: 18px;
     line-height: 24px;
+    text-align: center;
     letter-spacing: -0.3px;
     color: #7e7c8e;
     transform: translateX(-50%);
     transition: opacity 0.2s 0.3s;
+    &__tip {
+      font-family: OPPOSans;
+      font-weight: 400;
+      font-size: 28rpx;
+      line-height: 36rpx;
+      text-align: center;
+      letter-spacing: -0.3px;
+      color: #d6d6d6;
+    }
   }
   &__logo {
     position: fixed;
@@ -166,7 +210,7 @@ watch(
       width: 100%;
       height: 100%;
       border-radius: 48rpx;
-      box-shadow: inset 0 -12px 14px -7px rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0 -12px 14px -7px rgba(0, 0, 0, 0.1);
     }
     &__image {
       width: 206rpx;
@@ -180,5 +224,8 @@ watch(
     animation: logo__shadow-wrap-animation 0.7s ease 0s 1 normal forwards
       running;
   }
+}
+.welcome-animation {
+  animation: welcome-animation 0.5s ease 0s 1 normal forwards running;
 }
 </style>

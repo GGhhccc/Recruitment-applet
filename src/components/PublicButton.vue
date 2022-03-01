@@ -1,5 +1,5 @@
 <template>
-  <button class="button">
+  <button class="button" @click="!props.disabled && $emit('click')">
     <slot>一个按钮</slot>
   </button>
 </template>
@@ -7,10 +7,15 @@
 <script setup lang="ts">
 interface Props {
   color?: string;
+  disabled?: boolean;
 }
 const props = withDefaults(defineProps<Props>(), {
   color: "#5379FF99",
+  disabled: false,
 });
+defineEmits<{
+  (e: "click"): void;
+}>();
 </script>
 
 <style lang="scss">

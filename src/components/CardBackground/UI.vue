@@ -35,7 +35,7 @@
   @author 梁国昊
   @date 2022/2/20
 */
-import UIText from "./TextShow/UIText";
+import UIText from "./TextShow/UIText.vue";
 </script>
 
 <style lang="scss" scoped>
