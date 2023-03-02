@@ -167,7 +167,7 @@ const emits = defineEmits<{
 
 const isUseButton = ref(true);
 checkState().then((res: any) => {
-  if (res.data.code === "200") {
+  if (res.data.code === 200) {
     if (res.data.msg == "0") {
       isUseButton.value = false;
     }
@@ -261,7 +261,7 @@ watch(
     left: 54rpx;
     top: 298rpx;
     width: 354rpx;
-    font-family: OPPOSans;
+    font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif!important;
     font-size: 36rpx;
     line-height: 48rpx;
     text-align: center;
@@ -276,7 +276,7 @@ watch(
     left: 54rpx;
     top: 298rpx;
     width: 354rpx;
-    font-family: OPPOSans;
+    font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif!important;
     font-size: 36rpx;
     line-height: 48rpx;
     text-align: center;
@@ -343,7 +343,7 @@ watch(
     left: 60rpx;
     top: 316rpx;
     width: 356rpx;
-    font-family: OPPOSans;
+    font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif!important;
     font-size: 36rpx;
     line-height: 48rpx;
     text-align: center;
@@ -358,7 +358,7 @@ watch(
     left: 60rpx;
     top: 316rpx;
     width: 356rpx;
-    font-family: OPPOSans;
+    font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif!important;
     font-size: 36rpx;
     line-height: 48rpx;
     text-align: center;
@@ -434,7 +434,7 @@ watch(
   &__text-box {
     position: absolute;
     width: 380rpx;
-    font-family: OPPOSans;
+    font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif!important;
     font-size: 28rpx;
     font-weight: bold;
     line-height: 36rpx;
@@ -445,7 +445,7 @@ watch(
     top: 310rpx;
     left: 110rpx;
     width: 334rpx;
-    font-family: OPPOSans;
+    font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif!important;
     font-size: 48rpx;
     letter-spacing: -0.6rpx;
     line-height: 64rpx;
@@ -458,7 +458,7 @@ watch(
     left: 54rpx;
     top: 298rpx;
     width: 354rpx;
-    font-family: OPPOSans;
+    font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif!important;
     font-size: 32rpx;
     line-height: 48rpx;
     text-align: center;
@@ -499,7 +499,7 @@ watch(
     left: 60rpx;
     top: 316rpx;
     width: 356rpx;
-    font-family: OPPOSans;
+    font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif!important;
     font-size: 32rpx;
     line-height: 48rpx;
     text-align: center;
@@ -527,7 +527,7 @@ watch(
     left: 46rpx;
     top: 400rpx;
     width: 420rpx;
-    font-family: OPPOSans;
+    font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif!important;
     font-size: 36rpx;
     line-height: 48rpx;
     text-align: center;

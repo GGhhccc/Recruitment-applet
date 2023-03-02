@@ -56,6 +56,7 @@ import Welcome from "../../components/Welcome.vue";
 import GroupToIntroduce from "../../components/GroupToIntroduce.vue";
 import SubmitForm from "../../components/Form.vue";
 import { ref } from "vue";
+import { onShow, onShareAppMessage, onShareTimeline } from '@dcloudio/uni-app'
 
 type TabBarListType =
   | "Android"
@@ -171,6 +172,32 @@ const switchTab = (type: TabBarListType) => {
     isDisableTabBar.value = false;
   }, 500);
 };
+
+let urlImg = '../../static/images/logo.png'
+onShareAppMessage(() => {
+	return {
+		title: "数智招新小程序",
+		path: '/pages/index/index',
+		imageUrl: urlImg,
+	};
+})
+
+onShareTimeline(() => {
+	return {
+	    title: '数智招新小程序',
+	    imageUrl: urlImg
+	}
+})
+
+
+onShow(() => {
+	wx.updateShareMenu({
+	  withShareTicket: true,
+	  success () { }
+	})
+	
+})
+
 </script>
 
 <style lang="scss">

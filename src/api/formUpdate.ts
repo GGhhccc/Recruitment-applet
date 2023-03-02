@@ -6,7 +6,7 @@
 import service from "../network/service";
 
 interface FormRequest {
-  id: string;
+  number: string;
   name: string;
   major: string; //专业班级
   direction: string; //选择方向 单选
@@ -20,14 +20,14 @@ interface FormRequest {
 }
 export function submitForm(params: FormRequest) {
   return service({
-    url: "https://www.tkoath.top/add",
-    method: "POST",
+    url: "https://shuzhiweb.top/recruitmentApi/add",
+	method: "POST",
     data: JSON.stringify(params),
   });
 }
 
 export function checkState() {
   return service({
-    url: "https://www.tkoath.top/state",
+    url: "https://shuzhiweb.top/recruitmentApi/state",
   });
 }

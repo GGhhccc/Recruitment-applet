@@ -146,12 +146,12 @@ const exposeEmit = () => {
     gap: 15rpx;
     height: 120px;
     &__hello {
-      font-family: OPPOSans;
+      font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif!important;
       font-size: 84rpx;
       color: #4f4c4c;
     }
     &__explore-text {
-      font-family: OPPOSans;
+      font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif!important;
       line-height: 50rpx;
       font-size: 40rpx;
       color: #a7a7a7;
@@ -179,7 +179,7 @@ const exposeEmit = () => {
     left: 50%;
     top: 156rpx;
     z-index: 1;
-    font-family: OPPOSans;
+    font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif!important;
     font-weight: bold;
     font-size: 18px;
     line-height: 24px;
@@ -189,13 +189,13 @@ const exposeEmit = () => {
     transform: translateX(-50%);
     transition: opacity 0.2s 0.3s;
     &__tip {
-      font-family: OPPOSans;
+      font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif!important;
       font-weight: 400;
       font-size: 28rpx;
       line-height: 36rpx;
       text-align: center;
       letter-spacing: -0.3px;
-      color: #d6d6d6;
+      color: #c1c1c1;
     }
   }
   &__logo {

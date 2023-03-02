@@ -25,7 +25,7 @@
       <!--学号-->
       <view class="form_main_id form_main_view">
         <input
-          v-model.trim="formData.id"
+          v-model.trim="formData.number"
           type="text"
           class="form_main_id_edit form_main_view_input"
           placeholder="学号"
@@ -180,7 +180,7 @@ defineEmits<{
 }>();
 
 const formData = reactive({
-  id: "",
+  number: "",
   name: "",
   major: "",
   direction: "",
@@ -205,7 +205,7 @@ const formCheck = () => {
       errorMsg: "请输入你的名字",
     },
     {
-      handler: !formData.id,
+      handler: !formData.number,
       errorMsg: "请输入你的学号",
     },
     {
@@ -291,7 +291,7 @@ const postQuest = () => {
       #dfc1fd 0%,
       rgba(223, 193, 253, 0) 100%
     );
-    font-family: OPPOSans;
+    font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif!important;
     font-size: 36rpx;
     line-height: 180rpx;
     text-align: center;
@@ -327,7 +327,7 @@ const postQuest = () => {
         width: 562rpx;
         height: 72rpx;
         padding-left: 30rpx;
-        font-family: OPPOSans;
+        font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif!important;
         font-weight: bold;
         font-size: 32rpx;
         line-height: 72rpx;
