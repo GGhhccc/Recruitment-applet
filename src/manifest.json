@@ -1,19 +1,20 @@
 {
-  "name": "shuzhi-lab",
-  "appid": "wx53fb5d1afdf6c93a",
-  "description": "a miniprogram for ShuZhiLAB",
-  "versionName": "1.0.0",
-  "versionCode": "100",
-  "transformPx": false,
-  "mp-weixin": {
-    "appid": "wx53fb5d1afdf6c93a",
-    "setting": {
-      "urlCheck": false
+    "name" : "ShuZhiLAB",
+    "appid" : "__UNI__7B52F00",
+    "description" : "a miniprogram for ShuZhiLAB",
+    "versionName" : "1.0.0",
+    "versionCode" : "100",
+    "transformPx" : false,
+    "mp-weixin" : {
+        "appid" : "wxeee7668ca26fbe1f",
+        "setting" : {
+            "urlCheck" : false,
+            "postcss" : false
+        },
+        "usingComponents" : true
     },
-    "usingComponents": true
-  },
-  "uniStatistics": {
-    "enable": false
-  },
-  "vueVersion": "3"
+    "uniStatistics" : {
+        "enable" : false
+    },
+    "vueVersion" : "3"
 }
