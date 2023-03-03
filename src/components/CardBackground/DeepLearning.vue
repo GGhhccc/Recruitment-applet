@@ -5,7 +5,7 @@
       src="../../static/images/introduce_card/deep-learning-robot.png"
       mode=""
     />
-    <image
+<!--    <image
       class="deep-learning-background__white-star1"
       src="../../static/images/introduce_card/white-star.png"
       alt=""
@@ -14,10 +14,10 @@
       class="deep-learning-background__white-star2"
       src="../../static/images/introduce_card/white-star.png"
       alt=""
-    />
+    /> -->
     <image
-      class="deep-learning-background__angle"
-      src="../../static/images/introduce_card/deep-learn-angle.png"
+      class="deep-learning-background__lebal"
+      src="../../static/images/introduce_card/deep-learning-lebal.png"
       mode=""
     />
     <DeepLearningText />
@@ -78,12 +78,12 @@ import DeepLearningText from "./TextShow/DeepLearningText.vue";
     transform: matrix(-0.02, -1, 1, -0.03, 0, 0);
     z-index: 5;
   }
-  &__angle {
+  &__lebal {
     position: absolute;
-    width: 380.32rpx;
-    height: 138.36rpx;
-    top: -38rpx;
-    left: -106rpx;
+    width: 142rpx;
+    height: 160rpx;
+    top: -83rpx;
+    left: -77rpx;
     z-index: 1;
   }
 }

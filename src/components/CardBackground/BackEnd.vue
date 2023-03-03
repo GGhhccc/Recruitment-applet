@@ -1,25 +1,25 @@
 <template>
   <div class="back-end-background">
-    <image
+<!--    <image
       class="back-end-background__white-star1"
       src="../../static/images/introduce_card/white-star.png"
-    />
+    /> -->
     <image
       class="back-end-background__robot back-end-background__robot-animation"
       src="../../static/images/introduce_card/back-end-robot.png"
     />
-    <image
+<!--    <image
       class="back-end-background__white-star2"
       src="../../static/images/introduce_card/white-star.png"
-    />
+    /> -->
     <image
       class="back-end-background__icon"
       src="../../static/images/introduce_card/back-end-icon.png"
     />
-    <image
+<!--    <image
       class="back-end-background__angle"
       src="../../static/images/introduce_card/back-end-angle.png"
-    />
+    /> -->
     <BackEndText />
   </div>
 </template>

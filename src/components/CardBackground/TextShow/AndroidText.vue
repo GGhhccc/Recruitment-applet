@@ -29,15 +29,23 @@
   font-style: normal;
   font-size: 26rpx;
   font-weight: bold;
-  line-height: 40rpx;
+  line-height: 42rpx;
   letter-spacing: -0.6rpx;
   color: #7b797a;
   padding: 72rpx 34rpx 60rpx 44rpx;
-  &__1-title {
-    display: inline;
-    font-size: 34rpx;
-    color: #5a8ced;
+  &__1 {
+	  padding-right: 30rpx;
+	  &-title {
+		  display: inline;
+		  font-size: 34rpx;
+		  color: #5a8ced;
+	  }
   }
+  // &__1-title {
+  //   display: inline;
+  //   font-size: 34rpx;
+  //   color: #5a8ced;
+  // }
   &__2 {
     margin-top: 6rpx;
   }

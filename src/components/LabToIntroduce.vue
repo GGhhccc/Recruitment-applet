@@ -1,5 +1,10 @@
 <template>
   <view class="lab-to-introduce">
+	<image
+		class="lab-to-introduce__hashtag"
+		src="../static/images/introduce_card/lab-hashtag.png"
+		mode=""
+	/>
     <view
       :class="[
         'lab-to-introduce__text-box',
@@ -431,6 +436,15 @@ watch(
   border-radius: 40rpx;
   backdrop-filter: blur(8rpx);
   box-sizing: border-box;
+  
+  &__hashtag {
+	  position: absolute;
+	  width: 122px;
+	  height: 122px;
+	  top: -82rpx;
+	  left: 366rpx;
+  }
+  
   &__text-box {
     position: absolute;
     width: 380rpx;

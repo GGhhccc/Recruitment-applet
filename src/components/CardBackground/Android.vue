@@ -1,6 +1,6 @@
 <template>
   <div class="android-background">
-    <image
+<!--   <image
       class="android-background__white-star1"
       src="../../static/images/introduce_card/white-star.png"
       mode=""
@@ -14,12 +14,17 @@
       class="android-background__white-star3"
       src="../../static/images/introduce_card/white-star.png"
       mode=""
-    />
+    /> -->
     <image
       class="android-background__robot android-background__robot-animation"
       src="../../static/images/introduce_card/android-robot.png"
       mode=""
     />
+	<image
+	 class="android-background__spring"
+	 src="../../static/images/introduce_card/android-spring.png"
+	 mode=""
+	/>
     <AndroidText />
   </div>
 </template>
@@ -82,12 +87,19 @@ import AndroidText from "./TextShow/AndroidText.vue";
     left: 404rpx;
     top: 602.04rpx;
   }
+  &__spring {
+    position: absolute;
+    width: 295rpx;
+    height: 310rpx;
+    left: 272rpx;
+    top: -100rpx;
+  }
   &__robot {
     position: absolute;
     width: 476rpx;
     height: 426rpx;
     left: 116rpx;
-    top: 440rpx;
+    top: 400rpx;
   }
   &__robot-animation {
     animation: robot-animation 1.5s ease 0s infinite alternate running;

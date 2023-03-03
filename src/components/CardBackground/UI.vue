@@ -5,7 +5,7 @@
       src="../../static/images/introduce_card/ui-robot.png"
       mode=""
     />
-    <image
+    <!-- <image
       class="ui-background__white-star1"
       src="../../static/images/introduce_card/white-star.png"
       mode=""
@@ -19,12 +19,12 @@
       class="ui-background__white-star3"
       src="../../static/images/introduce_card/white-star.png"
       mode=""
-    />
+    /> -->
     <UIText />
   </div>
   <image
-    class="ui-background__angle"
-    src="../../static/images/introduce_card/ui-angle.png"
+    class="ui-background__plane"
+    src="../../static/images/introduce_card/ui-plane.png"
     mode=""
   />
 </template>
@@ -87,14 +87,17 @@ import UIText from "./TextShow/UIText.vue";
     left: 405.18rpx;
     top: 597rpx;
   }
-  &__angle {
+  &__plane {
     position: absolute;
-    width: 262.92rpx;
-    height: 133.32rpx;
-    top: 580rpx;
-    left: -90rpx;
-    transform: rotate(0.08deg);
-    z-index: 1;
+    // width: 262.92rpx;
+    // height: 133.32rpx;
+    // top: 580rpx;
+	width: 320rpx;
+	height: 320rpx;
+    top: 560rpx;
+    left: -120rpx;
+    // transform: rotate(0.08deg);
+    z-index: 2;
   }
 }
 </style>

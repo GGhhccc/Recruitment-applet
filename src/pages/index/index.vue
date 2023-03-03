@@ -173,7 +173,8 @@ const switchTab = (type: TabBarListType) => {
   }, 500);
 };
 
-let urlImg = '../../static/images/logo.png'
+// 分享功能
+let urlImg = '../../static/images/share-image2.png'
 onShareAppMessage(() => {
 	return {
 		title: "数智招新小程序",

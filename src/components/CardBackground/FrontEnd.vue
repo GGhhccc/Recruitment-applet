@@ -1,10 +1,10 @@
 <template>
   <div class="front-end-background">
-    <image
+<!--    <image
       class="front-end-background__white-star1"
       src="../../static/images/introduce_card/white-star.png"
       alt=""
-    />
+    /> -->
     <image
       class="front-end-background__robot front-end-background__robot-animation"
       alt=""
@@ -15,11 +15,11 @@
       alt=""
       src="../../static/images/introduce_card/front-end-icon.png"
     />
-    <image
+<!--    <image
       class="front-end-background__white-star2"
       src="../../static/images/introduce_card/white-star.png"
       alt=""
-    />
+    /> -->
     <FrontEndText />
   </div>
 </template>
